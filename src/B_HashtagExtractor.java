@@ -27,7 +27,7 @@ public class B_HashtagExtractor {
                 endWord = post.length();
             }
             String hashtag = post.substring(index, endWord);
-            
+
             if (!print.equals("")) {
                 print = print + ", ";
             }
