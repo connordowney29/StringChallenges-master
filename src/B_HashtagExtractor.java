@@ -28,6 +28,13 @@ public class B_HashtagExtractor {
             }
             String hashtag = post.substring(index, endWord);
 
+            char punctuationFinder = hashtag.charAt(hashtag.length()-1);
+
+            if (punctuationFinder == '!' || punctuationFinder == '.' || punctuationFinder == '?')
+            {
+                hashtag = hashtag.substring(0,hashtag.length()-1);
+            }
+
             if (!print.equals("")) {
                 print = print + ", ";
             }

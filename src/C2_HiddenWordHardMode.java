@@ -29,6 +29,31 @@ public class C2_HiddenWordHardMode {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 /* TODO: your code goes here */
+                String start = "*";
+                String end = "~";
+                String words = "";
+
+                int startPoint = line.indexOf(start);
+                while(startPoint != -1) {
+                    startPoint = startPoint + start.length();
+
+
+                    int endPoint = line.indexOf(end, startPoint);
+                    String hiddenWord = line.substring(startPoint, endPoint);
+
+                    if (!(words.equals(""))) {
+                        words = words + " ";
+                    }
+                    words = words + hiddenWord;
+
+                    startPoint = line.indexOf(start, endPoint);
+
+                }
+
+                if(!(words.equals(""))){
+                    System.out.println(words);
+                }
+
 
             }
             scanner.close();

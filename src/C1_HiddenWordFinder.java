@@ -18,6 +18,26 @@ public class C1_HiddenWordFinder {
 
     public void findHiddenWord(String sentence) {
         /* TODO: your code goes here */
+String start = "start";
+String end = "end";
+
+int startPoint = sentence.indexOf(start);
+
+startPoint = startPoint + start.length();
+
+int endPoint = sentence.indexOf(end, startPoint);
+
+String hiddenWord = sentence.substring(startPoint, endPoint);
+
+System.out.println(hiddenWord);
+
+
+
+
+
+
+
+
 
     }
 
