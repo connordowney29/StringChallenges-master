@@ -22,8 +22,20 @@ public class D_PasswordValidator {
 
     public boolean isValidPassword(String password) {
         /* TODO: your code goes here */
+        boolean valid;
 
-        return true; // this is a temporary return to avoid errors
+        boolean upperCheck = password.equals(password.toLowerCase());
+        boolean numberCheck = password.matches(".*[1-9]*.");
+        boolean hasPwd = password.toLowerCase().contains("password");
+
+        if (!(upperCheck) && numberCheck && hasPwd) {
+            return true;
+        }
+
+        if ((upperCheck) || !(numberCheck) || !(hasPwd)) {
+            return false;
+        }
+
+
     }
-
 }
