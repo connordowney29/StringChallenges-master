@@ -18,6 +18,30 @@ public class E_WordReverser {
     public void reverseWords(String sentence) {
         /* TODO: your code goes here */
 
+        String words[] = sentence.split(" ");
+        String reverseSentence = "";
+        for(int i = 0; i < words.length; i++) {
+            String word = words[i];
+            String reverseWord = "";
+
+            //counting down for loop creating the reverse word
+            for (int backwards = word.length() - 1; backwards >= 0; backwards--) {
+                reverseWord = reverseWord + word.charAt(backwards);
+            }
+            //if there is already excisting content, add a space
+            if (!(reverseSentence.equals(""))) {
+                reverseSentence = reverseSentence + " ";
+            }
+
+            //combine the already sentence with the next reverse word
+            reverseSentence = reverseSentence + reverseWord;
+
+        }
+        System.out.println(reverseSentence);
+
+
+        }
+
+
     }
 
-}

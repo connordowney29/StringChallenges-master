@@ -20,16 +20,16 @@ public class C1_HiddenWordFinder {
         /* TODO: your code goes here */
 String start = "start";
 String end = "end";
-
+//find start point
 int startPoint = sentence.indexOf(start);
-
+//go to begin of word rather than s
 startPoint = startPoint + start.length();
-
+//end point
 int endPoint = sentence.indexOf(end, startPoint);
-
+//hidden word using a substring, in between start point and end point
 String hiddenWord = sentence.substring(startPoint, endPoint);
-
-System.out.println(hiddenWord);
+//print
+System.out.println("Hidden Word: " + hiddenWord);
 
 
 

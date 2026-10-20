@@ -32,12 +32,13 @@ public class C2_HiddenWordHardMode {
                 String start = "*";
                 String end = "~";
                 String words = "";
+                //find the start of the *'s
 
                 int startPoint = line.indexOf(start);
                 while(startPoint != -1) {
                     startPoint = startPoint + start.length();
 
-
+                    // find end point using index, goes from start point to end
                     int endPoint = line.indexOf(end, startPoint);
                     String hiddenWord = line.substring(startPoint, endPoint);
 

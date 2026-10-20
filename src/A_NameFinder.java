@@ -18,7 +18,10 @@ public class A_NameFinder {
 
     public String findUsername(String email) {
         /* TODO: your code goes here */
+
+        //index to find wher  @ is
         int index = email.indexOf("@");
+        //return the characters frm the first digit up to the @(not including it)
        return email.substring(0, index);
 
        // return ""; // this is a temporary return to avoid errors
