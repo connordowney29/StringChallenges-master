@@ -25,7 +25,7 @@ public class D_PasswordValidator {
         //boolean to find whether there is an uppercase
         boolean upperCheck = password.equals(password.toLowerCase());
         //boolean to check if there is a number. CITATION: Oracle String Website
-        boolean numberCheck = password.matches(".*[0-9].*");
+        boolean numberCheck = password.matches(".*[0-9].*"); //CITATION: Oracle String Website
         //Boolean to chek if password is the password, CITATION: ORACLE STRING WEBSITE
         boolean hasPwd = password.toLowerCase().contains("password");
         // CHECK IF VALID
