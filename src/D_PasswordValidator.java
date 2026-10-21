@@ -27,7 +27,7 @@ public class D_PasswordValidator {
         //boolean to check if there is a number. CITATION: Oracle String Website
         boolean numberCheck = password.matches(".*[0-9].*"); //CITATION: Oracle String Website
         //Boolean to chek if password is the password, CITATION: ORACLE STRING WEBSITE
-        boolean hasPwd = password.toLowerCase().contains("password");
+        boolean hasPwd = password.toLowerCase().replace('0', 'o').replace('5','s').contains("password");
         // CHECK IF VALID
         if (!(upperCheck) && numberCheck && !(hasPwd)) {
             return true;
